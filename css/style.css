@@ -1,58 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
 
 body {
-  background-color: hsl(212, 45%, 89%);
-  line-height: 1.3em;
-  font-family: 'Outfit', serif;
+  line-height: 1.4;
+  font-family: 'Outfit', sans-serif;
+}
 
-  min-height: 100vh;
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
 }
 
 a {
   text-decoration: none;
-  color: hsl(218, 44%, 22%);
 }
 
-img {
-  max-width: 100%;
+.main-container {
+  background-color: hsl(212, 45%, 89%);
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  max-width: 21.875rem;
+}
+
+.content-wrapper .qr-code {
   border-radius: 10px;
   margin-bottom: 20px;
 }
 
-h1 {
+.content-wrapper h2 {
+  font-weight: 700;
+  text-align: center;
+  padding: 0 20px;
   color: hsl(218, 44%, 22%);
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 0 15px;
-  line-height: 1.2em;
+  margin-bottom: 15px;
 }
 
-p {
-  text-align: center;
-  color: hsl(216, 15%, 48%);
+.content-wrapper p {
   font-weight: 400;
-  padding: 0 20px 20px;
-}
-
-section {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 15px;
-  padding: 15px;
-  max-width: 350px;
-}
-
-footer {
   text-align: center;
-  margin-top: 20px;
+  padding: 0 20px;
+  color: hsl(216, 15%, 48%);
+  margin-bottom: 15px;
 }
